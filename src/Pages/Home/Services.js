@@ -3,6 +3,7 @@ import fluoride from '../../assets/images/fluoride.png'
 import whitening from '../../assets/images/whitening.png'
 import cavity from '../../assets/images/cavity.png'
 import Service from './Service';
+import treatment from '../../assets/images/treatment.png'
 const Services = () => {
     const services = [
         {
@@ -38,7 +39,7 @@ const Services = () => {
             <div className='mt-10'>
                 <div class="hero min-h-screen">
                     <div class="hero-content flex-col lg:flex-row">
-                        <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={treatment} class="md:max-w-sm rounded-lg shadow-2xl" />
                         <div className='w-full md:w-1/2 md:ml-16'>
                             <h1 class=" text-2xl md:text-5xl font-bold">Exceptional Dental Care, on Your Terms</h1>
                             <p class="py-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
