@@ -4,9 +4,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'banner-bg': "url('./src/assets/images/bg.png')",
-      }
     },
   },
   daisyui: {

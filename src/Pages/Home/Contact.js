@@ -10,9 +10,10 @@ const Contact = () => {
                 </p>
                 <h1 className='text-4xl'>Stay connected with us</h1>
             </div>
-            <div className='grid grid-cols-1 justify-items-center gap-5'>
-                <input
-                    type='text'
+            <div>
+              <form className='grid grid-cols-1 justify-items-center gap-5'>
+              <input
+                    type='email'
                     placeholder='Email Address'
                     className='input w-full max-w-md'
                 />
@@ -26,7 +27,8 @@ const Contact = () => {
                     placeholder='Your message'
                     rows={6}
                 ></textarea>
-                <input class="btn btn-primary text-white uppercase font-bold bg-gradient-to-r from-secondary to-primary" type="submit" value="Submit" />
+                <input className="btn btn-primary text-white uppercase font-bold bg-gradient-to-r from-secondary to-primary" type="submit" value="Submit" />
+              </form>
             </div>
         </div>
     );
