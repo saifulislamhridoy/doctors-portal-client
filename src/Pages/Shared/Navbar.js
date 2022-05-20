@@ -1,9 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 z-10 sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -15,7 +19,7 @@ const Navbar = () => {
                         <li><Link to='/reviwes'>Reviws</Link></li>
                         <li><Link to='/contact'>Contact Us</Link></li>
                         <li><Link to='/about'>About</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        <li>{user?<Link onClick={()=>signOut(auth)} to='/login'>Sign Out</Link>:<Link to='/login'>Login</Link>}</li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
@@ -27,7 +31,7 @@ const Navbar = () => {
                         <li><Link to='/reviwes'>Reviws</Link></li>
                         <li><Link to='/contact'>Contact Us</Link></li>
                         <li><Link to='/about'>About</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        <li>{user?<Link onClick={()=>signOut(auth)} to='/login'>Sign Out</Link>:<Link to='/login'>Login</Link>}</li>
                 </ul>
             </div>
         </div>
